@@ -21,6 +21,11 @@
     <%= f.text_field :city %>
   </div>
 
+  <div>
+    Service Offerings:
+    <%= f.collection_check_boxes(:service_offering_ids, ServiceOffering.all, :id, :name) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
